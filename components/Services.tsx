@@ -1,32 +1,35 @@
-const KeyIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <circle cx="10" cy="16" r="5" />
-    <path d="M15 16h14" />
-    <path d="M23 16v5" />
-    <path d="M27 16v3" />
-    <circle cx="10" cy="16" r="1.2" fill="currentColor" />
-  </svg>
-);
-
-const ToolIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M21 4a6 6 0 00-5.66 7.93L4 23.27 7.73 27l11.34-11.34A6 6 0 1021 4z" />
-    <circle cx="21" cy="10" r="1.2" fill="currentColor" />
-  </svg>
-);
+import Image from "next/image";
 
 const services = [
   {
-    icon: <KeyIcon />,
-    title: "Room Restoration & Detailing",
+    title: "Premium Paint & Surface Revival",
     body:
-      "Bring rooms back to guest-ready condition within 24–48 hours. Paint touch-ups, surface repairs, deep cleaning, linen reset, staging, and full detailing — all executed to Forbes and AAA presentation standards.",
+      "Expert touch-ups, repainting, and surface restoration to eliminate scuffs, scratches, wear, and discoloration.",
   },
   {
-    icon: <ToolIcon />,
-    title: "Engineering Support",
+    title: "Preventative Maintenance",
     body:
-      "Relieve overworked engineering departments by offloading repetitive and time-consuming tasks — freeing your internal team to focus on priority repairs and guest-facing issues.",
+      "A structured 24–48 hour cycle to identify issues early, prevent outages, and extend asset life.",
+  },
+  {
+    title: "HVAC Preventative Services",
+    body:
+      "Drain clearing, plumbing fixes, HVAC filter changes, vent cleaning, and temperature maintenance.",
+  },
+  {
+    title: "Luxury Standards Compliance",
+    body:
+      "Maintain Forbes and AAA criteria through meticulous care and flawless detailing.",
+  },
+  {
+    title: "Damage Repair & Asset Protection",
+    body:
+      "Repair or replace damaged tile, baseboards, fixtures, hardware, furniture, and appliances.",
+  },
+  {
+    title: "Quality Assurance & Reporting",
+    body:
+      "Detailed assessments, Alevare QC standards, photo reports, and transparent recommendations.",
   },
 ];
 
@@ -40,29 +43,64 @@ export default function Services() {
             className="font-display font-medium text-[color:var(--text-primary)] text-[36px] md:text-[48px] lg:text-[56px] leading-[1.08]"
             style={{ letterSpacing: "-0.02em" }}
           >
-            Operational support where it matters most.
+            Expert room restoration &{" "}
+            <span className="italic">preventative maintenance.</span>
           </h2>
+          <p className="mt-6 text-[16px] md:text-[18px] leading-relaxed text-[color:var(--text-muted)]">
+            Comprehensive services designed specifically for hotels and resorts.
+            From eliminating out-of-order rooms to supporting overworked
+            engineering teams, Alevare brings consistency, quality, and
+            efficiency to your property.
+          </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {services.map((s) => (
-            <article
-              key={s.title}
-              className="border border-[color:var(--border-hairline)] bg-[color:var(--surface-elevated)] p-8 md:p-10 transition-colors hover:border-[color:var(--accent-primary)]/50"
-              style={{ borderRadius: "2px" }}
-            >
-              <div className="text-[color:var(--accent-primary)] mb-6">{s.icon}</div>
-              <h3
-                className="font-display text-[24px] md:text-[28px] text-[color:var(--text-primary)] font-medium leading-tight"
-                style={{ letterSpacing: "-0.01em" }}
+        <div className="mt-14 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)] gap-8 lg:gap-12 items-start">
+          <div
+            className="relative border border-[color:var(--border-hairline)] overflow-hidden"
+            style={{ borderRadius: "2px" }}
+          >
+            <div
+              className="absolute inset-0 pointer-events-none z-10"
+              aria-hidden="true"
+              style={{
+                boxShadow: "inset 0 0 0 1px rgba(201, 169, 97, 0.25)",
+              }}
+            />
+            <Image
+              src="/alevare-service.webp"
+              alt="Alevare white-glove hotel room restoration in progress"
+              width={1200}
+              height={1500}
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="h-full w-full object-cover"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+            {services.map((s) => (
+              <article
+                key={s.title}
+                className="border border-[color:var(--border-hairline)] bg-[color:var(--surface-elevated)] p-5 md:p-6 transition-colors hover:border-[color:var(--accent-primary)]/60 flex flex-col"
+                style={{ borderRadius: "2px" }}
               >
-                {s.title}
-              </h3>
-              <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[color:var(--text-muted)]">
-                {s.body}
-              </p>
-            </article>
-          ))}
+                <div className="flex items-start gap-3">
+                  <span
+                    className="mt-2 h-1.5 w-1.5 rounded-full bg-[color:var(--accent-primary)] flex-shrink-0"
+                    aria-hidden="true"
+                  />
+                  <h3
+                    className="font-display text-[17px] md:text-[18px] text-[color:var(--text-primary)] font-medium leading-snug"
+                    style={{ letterSpacing: "-0.01em" }}
+                  >
+                    {s.title}
+                  </h3>
+                </div>
+                <p className="mt-3 text-[13.5px] md:text-[14px] leading-relaxed text-[color:var(--text-muted)] pl-5">
+                  {s.body}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
