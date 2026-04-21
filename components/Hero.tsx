@@ -1,9 +1,34 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[calc(100vh-5rem)] flex items-center overflow-hidden"
+      className="relative min-h-[calc(100vh-5rem)] flex items-center overflow-hidden bg-[color:var(--surface-base)]"
     >
+      <div
+        className="absolute inset-0 opacity-[0.12] md:opacity-[0.18] pointer-events-none"
+        aria-hidden="true"
+      >
+        <Image
+          src="/hero-bg.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
+
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(26,24,20,0.4) 0%, rgba(26,24,20,0.85) 100%)",
+        }}
+      />
+
       <div className="hero-glow absolute inset-0 pointer-events-none" aria-hidden="true" />
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.04]"
