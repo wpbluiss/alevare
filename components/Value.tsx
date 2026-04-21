@@ -1,3 +1,5 @@
+import Reveal from "@/components/Reveal";
+
 const ClockIcon = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <circle cx="14" cy="14" r="10.5" />
@@ -46,36 +48,42 @@ export default function Value() {
   return (
     <section
       id="value"
-      className="py-24 md:py-32 border-t border-[color:var(--border-hairline)]"
+      className="section-divider py-24 md:py-32"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="max-w-3xl">
-          <div className="eyebrow mb-5">What your property gains</div>
-          <h2
-            className="font-display font-medium text-[color:var(--text-primary)] text-[36px] md:text-[48px] lg:text-[56px] leading-[1.08]"
-            style={{ letterSpacing: "-0.02em" }}
-          >
-            Your rooms. Protected. Polished.{" "}
-            <span className="italic">Inspection-ready.</span>
-          </h2>
+          <Reveal>
+            <div className="eyebrow mb-5">What your property gains</div>
+          </Reveal>
+          <Reveal delay={80}>
+            <h2
+              className="font-display font-medium text-[color:var(--text-primary)] text-[36px] md:text-[48px] lg:text-[56px] leading-[1.08]"
+              style={{ letterSpacing: "-0.02em" }}
+            >
+              Your rooms. Protected. Polished.{" "}
+              <span className="italic">Inspection-ready.</span>
+            </h2>
+          </Reveal>
         </div>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-10">
-          {items.map((it) => (
-            <div key={it.title} className="flex flex-col">
-              <div className="text-[color:var(--accent-primary)] mb-5">
-                {it.icon}
+          {items.map((it, idx) => (
+            <Reveal key={it.title} delay={idx * 80}>
+              <div className="flex flex-col">
+                <div className="text-[color:var(--accent-primary)] mb-5">
+                  {it.icon}
+                </div>
+                <h3
+                  className="font-display text-[20px] md:text-[22px] text-[color:var(--text-primary)] font-medium leading-tight"
+                  style={{ letterSpacing: "-0.01em" }}
+                >
+                  {it.title}
+                </h3>
+                <p className="mt-3 text-[14px] md:text-[15px] leading-relaxed text-[color:var(--text-muted)] max-w-sm">
+                  {it.body}
+                </p>
               </div>
-              <h3
-                className="font-display text-[20px] md:text-[22px] text-[color:var(--text-primary)] font-medium leading-tight"
-                style={{ letterSpacing: "-0.01em" }}
-              >
-                {it.title}
-              </h3>
-              <p className="mt-3 text-[14px] md:text-[15px] leading-relaxed text-[color:var(--text-muted)] max-w-sm">
-                {it.body}
-              </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className="border-t border-[color:var(--border-hairline)] py-16">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12">
+          <div className="md:col-span-1">
             <Image
               src="/alevare-logo.webp"
               alt="Alevare Group"
@@ -22,23 +22,39 @@ export default function Footer() {
             <div className="eyebrow mb-4">Explore</div>
             <ul className="space-y-3 text-[14px]">
               <li>
-                <a href="#services" className="nav-link">
+                <a href="/#services" className="nav-link">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#process" className="nav-link">
+                <a href="/#process" className="nav-link">
                   Process
                 </a>
               </li>
               <li>
-                <a href="#team" className="nav-link">
+                <a href="/#team" className="nav-link">
                   About
                 </a>
               </li>
               <li>
-                <a href="#contact" className="nav-link">
+                <a href="/#discovery" className="nav-link">
                   Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="eyebrow mb-4">Legal</div>
+            <ul className="space-y-3 text-[14px]">
+              <li>
+                <a href="/privacy" className="nav-link">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="/terms" className="nav-link">
+                  Terms of Service
                 </a>
               </li>
             </ul>
@@ -57,7 +73,15 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 pt-6 border-t border-[color:var(--border-hairline)] flex flex-col md:flex-row justify-between gap-3 text-[12px] text-[color:var(--text-muted)]">
-          <div>© 2026 Alevare Group, Inc. All rights reserved.</div>
+          <div className="flex flex-col md:flex-row gap-2 md:gap-4">
+            <span>© 2026 Alevare Group, Inc. All rights reserved.</span>
+            <a
+              href="mailto:info@alevaregroup.com"
+              className="nav-link"
+            >
+              info@alevaregroup.com
+            </a>
+          </div>
           <div className="tracking-wider uppercase">
             Forbes &amp; AAA Standards
           </div>

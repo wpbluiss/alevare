@@ -4,10 +4,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "#services", label: "Services" },
-  { href: "#process", label: "Process" },
-  { href: "#team", label: "About" },
-  { href: "#discovery", label: "Contact" },
+  { href: "/#services", label: "Services" },
+  { href: "/#process", label: "Process" },
+  { href: "/#team", label: "About" },
+  { href: "/#discovery", label: "Contact" },
 ];
 
 export default function Nav() {
@@ -31,7 +31,7 @@ export default function Nav() {
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="flex h-20 items-center justify-between">
-          <a href="#top" className="flex items-center" aria-label="Alevare Group — Home">
+          <a href="/" className="flex items-center" aria-label="Alevare Group — Home">
             <Image
               src="/alevare-logo.webp"
               alt="Alevare Group"
@@ -53,7 +53,7 @@ export default function Nav() {
               </a>
             ))}
             <a
-              href="#discovery"
+              href="/#discovery"
               className="btn-gold inline-flex items-center px-5 py-2.5 text-[13px] font-semibold tracking-wide"
               style={{ borderRadius: "2px" }}
             >
@@ -95,7 +95,7 @@ export default function Nav() {
                 </a>
               ))}
               <a
-                href="#discovery"
+                href="/#discovery"
                 onClick={() => setOpen(false)}
                 className="btn-gold inline-flex w-fit items-center px-5 py-2.5 text-[13px] font-semibold tracking-wide"
                 style={{ borderRadius: "2px" }}

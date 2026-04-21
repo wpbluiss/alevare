@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Particles from "@/components/Particles";
 
 export default function Hero() {
   return (
@@ -39,6 +40,7 @@ export default function Hero() {
           backgroundSize: "48px 48px",
         }}
       />
+      <Particles />
 
       <div className="relative mx-auto max-w-6xl w-full px-6 md:px-10 py-28 md:py-0">
         <div className="flex flex-col items-center text-center fade-in">

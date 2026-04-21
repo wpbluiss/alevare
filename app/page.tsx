@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Services from "@/components/Services";
+import VideoSection from "@/components/VideoSection";
 import Process from "@/components/Process";
 import Team from "@/components/Team";
 import Value from "@/components/Value";
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <Stats />
         <Services />
+        <VideoSection />
         <Process />
         <Team />
         <Value />

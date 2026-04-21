@@ -163,3 +163,77 @@ html {
 .nav-link:hover {
   color: var(--text-primary);
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.section-divider {
+  position: relative;
+}
+.section-divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(201, 169, 97, 0) 0%,
+    rgba(201, 169, 97, 0.3) 15%,
+    rgba(201, 169, 97, 0.8) 50%,
+    rgba(201, 169, 97, 0.3) 85%,
+    rgba(201, 169, 97, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.service-card {
+  position: relative;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(201, 169, 97, 0) 0%,
+    rgba(201, 169, 97, 0.8) 50%,
+    rgba(201, 169, 97, 0) 100%
+  );
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease-out;
+  pointer-events: none;
+}
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.team-card {
+  transition: border-color 0.2s ease;
+}
+.team-card:hover {
+  border-color: var(--accent-primary);
+}

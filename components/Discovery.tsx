@@ -36,7 +36,7 @@ export default function Discovery() {
   };
 
   return (
-    <section id="discovery" className="py-24 md:py-32 border-t border-[color:var(--border-hairline)]">
+    <section id="discovery" className="section-divider py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="order-2 lg:order-1">

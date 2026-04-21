@@ -2,7 +2,7 @@ export default function CTA() {
   return (
     <section
       id="contact"
-      className="bg-[color:var(--surface-elevated)] border-y border-[color:var(--border-hairline)] py-24 md:py-32 relative overflow-hidden"
+      className="section-divider bg-[color:var(--surface-elevated)] border-b border-[color:var(--border-hairline)] py-24 md:py-32 relative overflow-hidden"
     >
       <div
         className="absolute inset-0 pointer-events-none"
