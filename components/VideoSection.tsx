@@ -4,6 +4,12 @@ import Reveal from "@/components/Reveal";
 // Location: components/VideoSection.tsx (VIDEO_ID constant below, ~line 6)
 const VIDEO_ID = "PLACEHOLDER_YOUTUBE_ID";
 
+if (VIDEO_ID === "PLACEHOLDER_YOUTUBE_ID") {
+  console.warn(
+    "[Alevare] VideoSection: VIDEO_ID is still PLACEHOLDER_YOUTUBE_ID. Swap with the real YouTube video ID before production launch. See components/VideoSection.tsx."
+  );
+}
+
 export default function VideoSection() {
   return (
     <section
