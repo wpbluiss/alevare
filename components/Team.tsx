@@ -79,7 +79,7 @@ export default function Team() {
                     aria-hidden="true"
                     style={{
                       background:
-                        "linear-gradient(180deg, transparent 60%, rgba(26, 24, 20, 0.45) 100%)",
+                        "linear-gradient(180deg, transparent 60%, rgba(21, 34, 49, 0.45) 100%)",
                     }}
                   />
                 </div>

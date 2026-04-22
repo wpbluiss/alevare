@@ -9,7 +9,7 @@ export default function CTA() {
         aria-hidden="true"
         style={{
           background:
-            "radial-gradient(ellipse 800px 400px at 50% 0%, rgba(201, 169, 97, 0.10), transparent 60%)",
+            "radial-gradient(ellipse 800px 400px at 50% 0%, rgba(184, 152, 99, 0.10), transparent 60%)",
         }}
       />
       <div className="relative mx-auto max-w-4xl px-6 md:px-10 text-center">

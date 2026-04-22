@@ -8,7 +8,7 @@ export default function Hero() {
       className="relative min-h-[calc(100vh-5rem)] flex items-center overflow-hidden bg-[color:var(--surface-base)]"
     >
       <div
-        className="absolute inset-0 opacity-[0.12] md:opacity-[0.18] pointer-events-none"
+        className="absolute inset-0 opacity-[0.08] md:opacity-[0.10] pointer-events-none"
         aria-hidden="true"
       >
         <Image
@@ -26,7 +26,7 @@ export default function Hero() {
         aria-hidden="true"
         style={{
           background:
-            "linear-gradient(180deg, rgba(26,24,20,0.4) 0%, rgba(26,24,20,0.85) 100%)",
+            "linear-gradient(180deg, rgba(21,34,49,0.4) 0%, rgba(21,34,49,0.85) 100%)",
         }}
       />
 
@@ -58,7 +58,14 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-8 max-w-2xl text-[17px] md:text-[20px] leading-relaxed text-[color:var(--text-muted)]">
+          <div
+            className="mt-6 mb-6 text-[14px] font-medium text-[color:var(--accent-primary)]"
+            style={{ letterSpacing: "0.15em", textTransform: "uppercase" }}
+          >
+            Elevating Maintenance to White-Glove Standards
+          </div>
+
+          <p className="max-w-2xl text-[17px] md:text-[20px] leading-relaxed text-[color:var(--text-muted)]">
             Alevare Group delivers Forbes- and AAA-standard room restoration for
             luxury hotels. 24–48 hour turnaround. White-glove execution. Full
             documentation.
@@ -84,8 +91,8 @@ export default function Hero() {
 
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 scroll-hint hidden md:block" aria-hidden="true">
           <svg width="22" height="34" viewBox="0 0 22 34" fill="none">
-            <rect x="0.5" y="0.5" width="21" height="33" rx="10.5" stroke="#C9A961" strokeOpacity="0.5" />
-            <circle cx="11" cy="11" r="2" fill="#C9A961" />
+            <rect x="0.5" y="0.5" width="21" height="33" rx="10.5" stroke="#B89863" strokeOpacity="0.5" />
+            <circle cx="11" cy="11" r="2" fill="#B89863" />
           </svg>
         </div>
       </div>

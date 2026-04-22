@@ -79,13 +79,13 @@ export default function Particles() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(201, 169, 97, ${p.opacity})`;
+        ctx.fillStyle = `rgba(184, 152, 99, ${p.opacity})`;
         ctx.fill();
 
         if (p.r > 1.2) {
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.r * 2.6, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(201, 169, 97, ${p.opacity * 0.18})`;
+          ctx.fillStyle = `rgba(184, 152, 99, ${p.opacity * 0.18})`;
           ctx.fill();
         }
       });

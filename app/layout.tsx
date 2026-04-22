@@ -16,6 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://alevare.vercel.app"),
   title:
     "Alevare Group — Luxury Hotel Room Restoration & Preventative Maintenance",
   description:
@@ -29,10 +30,10 @@ export const metadata: Metadata = {
     siteName: "Alevare Group",
     images: [
       {
-        url: "/hero-bg.jpg",
-        width: 1600,
-        height: 900,
-        alt: "Alevare Group — Luxury hotel room restoration",
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Alevare Group — Elevating maintenance to white-glove standards",
       },
     ],
   },
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
       "Alevare Group — Luxury Hotel Room Restoration & Preventative Maintenance",
     description:
       "Forbes- and AAA-standard room restoration for luxury hotels. 24-48 hour turnaround. White-glove execution.",
-    images: ["/hero-bg.jpg"],
+    images: ["/og-image.jpg"],
   },
 };
 

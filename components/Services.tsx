@@ -71,7 +71,7 @@ export default function Services() {
                 className="absolute inset-0 pointer-events-none z-10"
                 aria-hidden="true"
                 style={{
-                  boxShadow: "inset 0 0 0 1px rgba(201, 169, 97, 0.25)",
+                  boxShadow: "inset 0 0 0 1px rgba(184, 152, 99, 0.25)",
                 }}
               />
               <Image

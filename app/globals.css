@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --surface-base: #1A1814;
-  --surface-elevated: #24211C;
-  --border-hairline: #3D3831;
-  --text-primary: #F5EFE4;
-  --text-muted: #A39C8E;
-  --accent-primary: #C9A961;
-  --accent-hover: #E8C987;
-  --accent-subtle: rgba(201, 169, 97, 0.1);
+  --surface-base: #152231;
+  --surface-elevated: #1B2E40;
+  --border-hairline: #2A3D52;
+  --text-primary: #F0EDE5;
+  --text-muted: #8A95A3;
+  --accent-primary: #B89863;
+  --accent-hover: #D4B47A;
+  --accent-subtle: rgba(184, 152, 99, 0.1);
 }
 
 @theme inline {
@@ -76,8 +76,8 @@ html {
   background:
     radial-gradient(
       ellipse 900px 500px at 50% 0%,
-      rgba(201, 169, 97, 0.12) 0%,
-      rgba(201, 169, 97, 0.04) 30%,
+      rgba(184, 152, 99, 0.12) 0%,
+      rgba(184, 152, 99, 0.04) 30%,
       transparent 60%
     );
 }
@@ -197,11 +197,11 @@ html {
   height: 1px;
   background: linear-gradient(
     90deg,
-    rgba(201, 169, 97, 0) 0%,
-    rgba(201, 169, 97, 0.3) 15%,
-    rgba(201, 169, 97, 0.8) 50%,
-    rgba(201, 169, 97, 0.3) 85%,
-    rgba(201, 169, 97, 0) 100%
+    rgba(184, 152, 99, 0) 0%,
+    rgba(184, 152, 99, 0.3) 15%,
+    rgba(184, 152, 99, 0.8) 50%,
+    rgba(184, 152, 99, 0.3) 85%,
+    rgba(184, 152, 99, 0) 100%
   );
   pointer-events: none;
 }
@@ -218,9 +218,9 @@ html {
   height: 1px;
   background: linear-gradient(
     90deg,
-    rgba(201, 169, 97, 0) 0%,
-    rgba(201, 169, 97, 0.8) 50%,
-    rgba(201, 169, 97, 0) 100%
+    rgba(184, 152, 99, 0) 0%,
+    rgba(184, 152, 99, 0.8) 50%,
+    rgba(184, 152, 99, 0) 100%
   );
   transform: scaleX(0);
   transform-origin: center;

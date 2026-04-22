@@ -7,11 +7,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12">
           <div className="md:col-span-1">
             <Image
-              src="/alevare-logo.webp"
+              src="/alevare-logo-mark.jpg"
               alt="Alevare Group"
-              width={1200}
-              height={1071}
-              className="h-10 w-auto"
+              width={944}
+              height={706}
+              className="h-11 w-auto"
             />
             <p className="mt-5 max-w-xs text-[14px] leading-relaxed text-[color:var(--text-muted)]">
               White-glove room restoration for luxury hospitality.

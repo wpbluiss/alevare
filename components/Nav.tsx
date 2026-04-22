@@ -33,12 +33,12 @@ export default function Nav() {
         <div className="flex h-20 items-center justify-between">
           <a href="/" className="flex items-center" aria-label="Alevare Group — Home">
             <Image
-              src="/alevare-logo.webp"
+              src="/alevare-logo-mark.jpg"
               alt="Alevare Group"
-              width={1200}
-              height={1071}
+              width={944}
+              height={706}
               priority
-              className="h-12 w-auto"
+              className="h-14 w-auto"
             />
           </a>
 
