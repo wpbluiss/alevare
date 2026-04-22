@@ -4,20 +4,20 @@ export default function Footer() {
   return (
     <footer className="border-t border-[color:var(--border-hairline)] py-16">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12">
-          <div className="md:col-span-1">
-            <Image
-              src="/alevare-logo-mark.jpg"
-              alt="Alevare Group"
-              width={944}
-              height={706}
-              className="h-11 w-auto"
-            />
-            <p className="mt-5 max-w-xs text-[14px] leading-relaxed text-[color:var(--text-muted)]">
-              White-glove room restoration for luxury hospitality.
-            </p>
-          </div>
+        <div className="flex flex-col items-center text-center mb-6">
+          <Image
+            src="/alevare-logo-mark.jpg"
+            alt="Alevare Group"
+            width={944}
+            height={706}
+            className="h-24 w-auto"
+          />
+          <p className="mt-5 max-w-xs text-[14px] leading-relaxed text-[color:var(--text-muted)]">
+            White-glove room restoration for luxury hospitality.
+          </p>
+        </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
           <div>
             <div className="eyebrow mb-4">Explore</div>
             <ul className="space-y-3 text-[14px]">

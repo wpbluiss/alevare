@@ -1,4 +1,5 @@
 import Reveal from "@/components/Reveal";
+import VideoPlayer from "@/components/VideoPlayer";
 
 const VIDEO_ID = "tpGDn0CqBq4";
 
@@ -32,20 +33,13 @@ export default function VideoSection() {
 
         <Reveal delay={240} className="mt-14">
           <div
-            className="mx-auto max-w-4xl border border-[color:var(--accent-primary)]/40 bg-[color:var(--surface-elevated)] overflow-hidden"
-            style={{ borderRadius: "2px" }}
+            className="p-8 md:p-16"
+            style={{
+              background:
+                "linear-gradient(135deg, #152231 0%, #1B2E40 50%, #2A3D52 100%)",
+            }}
           >
-            <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
-              <iframe
-                src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0&modestbranding=1`}
-                title="Alevare Group — Why Leading Hotels Choose Alevare"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="absolute inset-0 h-full w-full"
-              />
-            </div>
+            <VideoPlayer videoId={VIDEO_ID} />
           </div>
         </Reveal>
       </div>
