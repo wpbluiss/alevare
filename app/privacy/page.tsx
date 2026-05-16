@@ -549,14 +549,9 @@ export default function PrivacyPage() {
       }
       sections={sections}
       footerNotice={
-        <>
-          <p className="text-sm italic text-[color:var(--text-muted)] leading-relaxed">
-            IMPORTANT NOTICE: This document has been prepared for informational purposes. Alevare Group recommends having this policy reviewed by a licensed Florida attorney before publishing, particularly the arbitration and limitation of liability clauses. Laws vary by jurisdiction and this document does not constitute legal advice.
-          </p>
-          <p className="mt-8 text-xs uppercase tracking-wider text-[color:var(--text-muted)] text-center">
-            © 2026 Alevare Group Inc. All rights reserved. &nbsp;|&nbsp; Version 2.0 — May 15, 2026
-          </p>
-        </>
+        <p className="text-xs uppercase tracking-wider text-[color:var(--text-muted)] text-center">
+          © 2026 Alevare Group Inc. All rights reserved. &nbsp;|&nbsp; Version 2.0 — May 15, 2026
+        </p>
       }
     />
   );
