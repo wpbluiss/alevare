@@ -37,7 +37,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/#discovery" className="nav-link">
+                <a href="/#contact-us" className="nav-link">
                   Contact
                 </a>
               </li>
