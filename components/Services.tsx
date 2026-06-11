@@ -3,34 +3,36 @@ import Reveal from "@/components/Reveal";
 
 const services = [
   {
-    title: "Premium Paint & Surface Revival",
-    body:
-      "Expert touch-ups, repainting, and surface restoration to eliminate scuffs, scratches, wear, and discoloration.",
+    title: "HVAC",
+    body: "Controls · Commissioning",
   },
   {
-    title: "Preventative Maintenance",
-    body:
-      "A structured 24–48 hour cycle to identify issues early, prevent outages, and extend asset life.",
+    title: "Refrigeration",
+    body: "Commercial Kitchens",
   },
   {
-    title: "HVAC Preventative Services",
-    body:
-      "Drain clearing, plumbing fixes, HVAC filter changes, vent cleaning, and temperature maintenance.",
+    title: "Pools & Water Features",
+    body: "Treatment · Maintenance",
   },
   {
-    title: "Luxury Standards Compliance",
-    body:
-      "Maintain Forbes and AAA criteria through meticulous care and flawless detailing.",
+    title: "MEP Systems",
+    body: "Mechanical · Plumbing",
   },
   {
-    title: "Damage Repair & Asset Protection",
-    body:
-      "Repair or replace damaged tile, baseboards, fixtures, hardware, furniture, and appliances.",
+    title: "Electrical",
+    body: "High & Low Voltage",
   },
   {
-    title: "Quality Assurance & Reporting",
-    body:
-      "Detailed assessments, Alevare QC standards, photo reports, and transparent recommendations.",
+    title: "Data & Network",
+    body: "Structured Cabling",
+  },
+  {
+    title: "FF&E Restoration",
+    body: "Furniture · Fixtures",
+  },
+  {
+    title: "Finishes",
+    body: "Paint · Wall · Millwork",
   },
 ];
 
@@ -47,16 +49,16 @@ export default function Services() {
               className="font-display font-medium text-[color:var(--text-primary)] text-[36px] md:text-[48px] lg:text-[56px] leading-[1.08]"
               style={{ letterSpacing: "-0.02em" }}
             >
-              Expert room restoration &{" "}
-              <span className="italic">preventative maintenance.</span>
+              Eight trades. One team.{" "}
+              <span className="italic">One standard.</span>
             </h2>
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-6 text-[16px] md:text-[18px] leading-relaxed text-[color:var(--text-muted)]">
-              Comprehensive services designed specifically for hotels and
-              resorts. From eliminating out-of-order rooms to supporting
-              overworked engineering teams, Alevare brings consistency, quality,
-              and efficiency to your property.
+              Every trade your property depends on, mastered in-house — no
+              subcontractor roulette, no handoffs, no finger-pointing. The same
+              core team carries the work from guestrooms to commercial kitchens
+              to pools, calibrated to Forbes and AAA standards.
             </p>
           </Reveal>
         </div>
