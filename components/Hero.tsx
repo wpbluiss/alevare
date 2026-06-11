@@ -45,16 +45,16 @@ export default function Hero() {
       <div className="relative mx-auto max-w-6xl w-full px-6 md:px-10 py-28 md:py-0">
         <div className="flex flex-col items-center text-center fade-in">
           <div className="eyebrow mb-8">
-            Luxury Hotel Room Restoration · Preventative Maintenance
+            Luxury Restoration · Preventive Maintenance · Full-Property Scope
           </div>
 
           <h1
             className="font-display font-medium text-[color:var(--text-primary)] text-[48px] leading-[1.05] sm:text-[64px] md:text-[80px] lg:text-[88px] max-w-5xl"
             style={{ letterSpacing: "-0.02em" }}
           >
-            Guest-perfect rooms.{" "}
+            Every space.{" "}
             <span className="underline-draw italic" style={{ fontVariationSettings: "'opsz' 144" }}>
-              Every time.
+              Perfectly maintained.
             </span>
           </h1>
 
@@ -62,22 +62,47 @@ export default function Hero() {
             className="mt-6 mb-6 text-[14px] font-medium text-[color:var(--accent-primary)]"
             style={{ letterSpacing: "0.15em", textTransform: "uppercase" }}
           >
-            Elevating Maintenance to White-Glove Standards
+            One Team. Every Trade. White-Glove Standard — Every Time.
           </div>
 
-          <p className="max-w-2xl text-[17px] md:text-[20px] leading-relaxed text-[color:var(--text-muted)]">
-            Alevare Group delivers Forbes- and AAA-standard room restoration for
-            luxury hotels. 24–48 hour turnaround. White-glove execution. Full
-            documentation.
+          <p className="max-w-3xl text-[16px] md:text-[18px] leading-relaxed text-[color:var(--text-muted)]">
+            Alevare Group is a unified team with over five years working
+            together inside South Florida&rsquo;s most demanding luxury
+            properties. We are not a network of subcontractors. The same core
+            team brings a shared fluency across HVAC, refrigeration, MEP, pools
+            &amp; water features, FF&amp;E, finishes, and high-to-low voltage
+            electrical — calibrated to Forbes 5-Star and AAA Five Diamond
+            standards. One team. One standard. Every time.
           </p>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-2 max-w-3xl">
+            {[
+              "Guestrooms",
+              "Lobbies & Public Areas",
+              "F&B Venues",
+              "Commercial Kitchens",
+              "Pools & Water Features",
+              "Spa & Wellness",
+              "Ballrooms",
+              "Luxury Residences",
+            ].map((space) => (
+              <span
+                key={space}
+                className="border border-[color:var(--border-hairline)] px-3.5 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em] text-[color:var(--accent-primary)]"
+                style={{ borderRadius: "2px" }}
+              >
+                {space}
+              </span>
+            ))}
+          </div>
 
           <div className="mt-12 flex flex-col sm:flex-row gap-4">
             <a
-              href="#contact"
+              href="#contact-us"
               className="btn-gold inline-flex items-center justify-center px-8 py-4 text-[14px] font-semibold tracking-wide"
               style={{ borderRadius: "2px" }}
             >
-              Request Quote <span className="ml-2">→</span>
+              Request a Consultation <span className="ml-2">→</span>
             </a>
             <a
               href="#process"

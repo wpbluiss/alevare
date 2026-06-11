@@ -57,7 +57,7 @@ export default function Nav() {
               className="btn-gold inline-flex items-center px-5 py-2.5 text-[13px] font-semibold tracking-wide"
               style={{ borderRadius: "2px" }}
             >
-              Request Quote
+              Request a Consultation
             </a>
           </nav>
 
