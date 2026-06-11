@@ -13,7 +13,7 @@ export default function Footer() {
             className="h-24 w-auto"
           />
           <p className="mt-5 max-w-xs text-[14px] leading-relaxed text-[color:var(--text-muted)]">
-            White-glove room restoration for luxury hospitality.
+            Elevating maintenance to white-glove standards.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export default function Footer() {
 
         <div className="mt-14 pt-6 border-t border-[color:var(--border-hairline)] flex flex-col md:flex-row justify-between gap-3 text-[12px] text-[color:var(--text-muted)]">
           <div className="flex flex-col md:flex-row gap-2 md:gap-4">
-            <span>© 2026 Alevare Group, Inc. All rights reserved.</span>
+            <span>© 2026 Alevare Group, Inc. · Miami · New York. All rights reserved.</span>
             <a
               href="mailto:info@alevaregroup.com"
               className="nav-link"

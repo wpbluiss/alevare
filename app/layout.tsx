@@ -18,14 +18,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://alevare.vercel.app"),
   title:
-    "Alevare Group — Luxury Hotel Room Restoration & Preventative Maintenance",
+    "Alevare Group — Luxury Restoration & Preventive Maintenance, Full-Property Scope",
   description:
-    "Forbes- and AAA-standard room restoration for luxury hotels. 24-48 hour turnaround. White-glove execution. Full documentation. Founded by hospitality professionals from NYC and Miami.",
+    "One team, every trade — HVAC, refrigeration, MEP, pools & water features, FF&E, finishes, and electrical — calibrated to Forbes 5-Star and AAA Five Diamond standards. Full-property restoration and preventive maintenance with real-time client visibility.",
   openGraph: {
     title:
-      "Alevare Group — Luxury Hotel Room Restoration & Preventative Maintenance",
+      "Alevare Group — Luxury Restoration & Preventive Maintenance, Full-Property Scope",
     description:
-      "Forbes- and AAA-standard room restoration for luxury hotels. 24-48 hour turnaround. White-glove execution. Full documentation. Founded by hospitality professionals from NYC and Miami.",
+      "One team, every trade — HVAC, refrigeration, MEP, pools & water features, FF&E, finishes, and electrical — calibrated to Forbes 5-Star and AAA Five Diamond standards. Full-property restoration and preventive maintenance with real-time client visibility.",
     type: "website",
     siteName: "Alevare Group",
     images: [
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Alevare Group — Luxury Hotel Room Restoration & Preventative Maintenance",
+      "Alevare Group — Luxury Restoration & Preventive Maintenance, Full-Property Scope",
     description:
-      "Forbes- and AAA-standard room restoration for luxury hotels. 24-48 hour turnaround. White-glove execution.",
+      "One team, every trade — full-property luxury restoration and preventive maintenance calibrated to Forbes 5-Star and AAA Five Diamond standards.",
     images: ["/og-image.jpg"],
   },
 };
