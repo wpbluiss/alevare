@@ -37,7 +37,8 @@ export default function CTA() {
               Request a Consultation <span className="ml-2">→</span>
             </a>
             <a
-              href="mailto:info@alevaregroup.com?subject=Capabilities%20Deck%20Request"
+              href="/alevare-capabilities-deck.pdf"
+              download="Alevare-Group-Capabilities.pdf"
               className="btn-ghost inline-flex items-center justify-center px-9 py-4 text-[14px] font-semibold tracking-wide"
               style={{ borderRadius: "2px" }}
             >
