@@ -2,10 +2,12 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Services from "@/components/Services";
+import CommandCenter from "@/components/CommandCenter";
 import VideoSection from "@/components/VideoSection";
 import Process from "@/components/Process";
 import Team from "@/components/Team";
-import Value from "@/components/Value";
+import Credentials from "@/components/Credentials";
+import Properties from "@/components/Properties";
 import Discovery from "@/components/Discovery";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -18,10 +20,12 @@ export default function Home() {
         <Hero />
         <Stats />
         <Services />
+        <CommandCenter />
         <VideoSection />
         <Process />
         <Team />
-        <Value />
+        <Credentials />
+        <Properties />
         <Discovery />
         <CTA />
       </main>

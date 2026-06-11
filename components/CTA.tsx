@@ -13,27 +13,37 @@ export default function CTA() {
         }}
       />
       <div className="relative mx-auto max-w-4xl px-6 md:px-10 text-center">
-        <div className="eyebrow mb-5">Begin your program</div>
+        <div className="eyebrow mb-5">Begin your partnership</div>
         <h2
           className="font-display font-medium text-[color:var(--text-primary)] text-[38px] md:text-[52px] lg:text-[56px] leading-[1.08]"
           style={{ letterSpacing: "-0.02em" }}
         >
-          Ready to elevate{" "}
-          <span className="italic">your rooms?</span>
+          Ready to experience{" "}
+          <span className="italic">a different standard?</span>
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-[16px] md:text-[18px] leading-relaxed text-[color:var(--text-muted)]">
-          Schedule a property walkthrough. We&rsquo;ll assess, quote, and
-          deliver a restoration plan tailored to your standards.
+          Alevare is currently accepting new property partnerships in Miami,
+          Fort Lauderdale, and New York. Let&rsquo;s talk about what
+          full-property visibility looks like for your asset.
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4">
-          <a
-            href="mailto:info@alevaregroup.com?subject=Property%20Walkthrough%20Request"
-            className="btn-gold inline-flex items-center justify-center px-9 py-4 text-[14px] font-semibold tracking-wide"
-            style={{ borderRadius: "2px" }}
-          >
-            Schedule a Walkthrough <span className="ml-2">→</span>
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#contact-us"
+              className="btn-gold inline-flex items-center justify-center px-9 py-4 text-[14px] font-semibold tracking-wide"
+              style={{ borderRadius: "2px" }}
+            >
+              Request a Consultation <span className="ml-2">→</span>
+            </a>
+            <a
+              href="mailto:info@alevaregroup.com?subject=Capabilities%20Deck%20Request"
+              className="btn-ghost inline-flex items-center justify-center px-9 py-4 text-[14px] font-semibold tracking-wide"
+              style={{ borderRadius: "2px" }}
+            >
+              Download Our Capabilities Deck
+            </a>
+          </div>
           <p className="text-[13px] text-[color:var(--text-muted)]">
             Or email{" "}
             <a
@@ -45,6 +55,14 @@ export default function CTA() {
             directly.
           </p>
         </div>
+
+        <p
+          className="font-display italic mx-auto mt-16 max-w-2xl text-[18px] md:text-[22px] leading-relaxed text-[color:var(--text-muted)]"
+          style={{ letterSpacing: "0.01em" }}
+        >
+          &ldquo;Every great hotel tells a story. We make sure the space is
+          ready for it.&rdquo;
+        </p>
       </div>
     </section>
   );
