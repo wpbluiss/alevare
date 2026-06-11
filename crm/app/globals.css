@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+:root {
+  --surface-base: #152231;
+  --surface-elevated: #1b2e40;
+  --border-hairline: #2a3d52;
+  --text-primary: #f0ede5;
+  --text-muted: #8a95a3;
+  --accent-primary: #b89863;
+  --accent-hover: #d4b47a;
+  --accent-subtle: rgba(184, 152, 99, 0.1);
+}
+
+@theme inline {
+  --color-surface: var(--surface-base);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-hairline: var(--border-hairline);
+  --color-ivory: var(--text-primary);
+  --color-muted: var(--text-muted);
+  --color-gold: var(--accent-primary);
+  --color-gold-hover: var(--accent-hover);
+  --color-gold-subtle: var(--accent-subtle);
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-inter);
+  --radius-brand: 2px;
+}
+
+html,
+body {
+  background: var(--surface-base);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--accent-primary);
+  color: var(--surface-base);
+}
+
+/* ----- Brand primitives ----------------------------------------------- */
+
+.font-display {
+  font-family: var(--font-fraunces), Georgia, serif;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-hairline);
+  border-radius: 2px;
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--accent-primary);
+  color: var(--surface-base);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+  padding: 0.625rem 1.25rem;
+  transition: background-color 150ms ease;
+  cursor: pointer;
+}
+
+.btn-gold:hover {
+  background: var(--accent-hover);
+}
+
+.btn-gold:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--border-hairline);
+  border-radius: 2px;
+  padding: 0.625rem 1.25rem;
+  transition: border-color 150ms ease, color 150ms ease;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-hover);
+}
+
+.btn-ghost:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.input {
+  width: 100%;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-hairline);
+  border-radius: 2px;
+  color: var(--text-primary);
+  font-size: 14px;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  transition: border-color 150ms ease;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.input:focus {
+  border-color: var(--accent-primary);
+}
+
+select.input option {
+  background: var(--surface-elevated);
+  color: var(--text-primary);
+}
+
+.field-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.375rem;
+}
+
+.th {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-align: left;
+  padding: 0.625rem 1rem;
+}
+
+.td {
+  padding: 0.75rem 1rem;
+  font-size: 14px;
+}
+
+/* native <details> chevron off, we render our own */
+details.panel > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+details.panel > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.panel > summary .chevron::after {
+  content: "+";
+  color: var(--accent-primary);
+}
+
+details.panel[open] > summary .chevron::after {
+  content: "\2212"; /* minus sign */
+}
