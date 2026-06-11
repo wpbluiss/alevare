@@ -33,7 +33,7 @@ export default function Credentials() {
           {certifications.map((c, idx) => (
             <Reveal key={c.abbr} delay={idx * 80}>
               <div
-                className="h-full border border-[color:var(--border-hairline)] bg-[color:var(--surface-elevated)] p-5 md:p-6 text-center"
+                className="spotlight-card h-full border border-[color:var(--border-hairline)] bg-[color:var(--surface-elevated)] p-5 md:p-6 text-center"
                 style={{ borderRadius: "2px" }}
               >
                 <div
@@ -59,7 +59,7 @@ export default function Credentials() {
           {standards.map((s, idx) => (
             <Reveal key={s.title} delay={idx * 100}>
               <div
-                className="h-full border border-[color:var(--border-hairline)] bg-[color:var(--surface-elevated)] p-6 md:p-8 flex items-start gap-5"
+                className="spotlight-card h-full border border-[color:var(--border-hairline)] bg-[color:var(--surface-elevated)] p-6 md:p-8 flex items-start gap-5"
                 style={{ borderRadius: "2px" }}
               >
                 <div

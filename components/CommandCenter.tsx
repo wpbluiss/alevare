@@ -146,7 +146,7 @@ export default function CommandCenter() {
               {panels.map((p, idx) => (
                 <div
                   key={p.title}
-                  className={`p-7 md:p-9 border-b border-[color:var(--border-hairline)] ${
+                  className={`spotlight-card p-7 md:p-9 border-b border-[color:var(--border-hairline)] ${
                     idx === 0
                       ? "md:border-r"
                       : ""
@@ -172,7 +172,7 @@ export default function CommandCenter() {
               {features.map((f, idx) => (
                 <div
                   key={f.title}
-                  className={`p-6 md:p-7 flex items-start gap-4 border-b border-[color:var(--border-hairline)] ${
+                  className={`spotlight-card p-6 md:p-7 flex items-start gap-4 border-b border-[color:var(--border-hairline)] ${
                     idx % 2 === 0 ? "sm:border-r" : ""
                   }`}
                 >
@@ -223,7 +223,7 @@ export default function CommandCenter() {
 
               <div
                 aria-hidden="true"
-                className="border border-[color:var(--border-hairline)] bg-[color:var(--surface-base)] p-5 md:p-6"
+                className="shine-border border border-[color:var(--border-hairline)] bg-[color:var(--surface-base)] p-5 md:p-6"
                 style={{ borderRadius: "2px" }}
               >
                 <div className="text-[10px] font-medium uppercase tracking-[0.18em] text-[color:var(--accent-primary)] mb-4">
@@ -281,7 +281,7 @@ export default function CommandCenter() {
                 <div className="italic text-[color:var(--text-muted)]">
                   No chasing contractors. No unanswered emails. No uncertainty.
                 </div>
-                <div className="text-[color:var(--accent-primary)] font-medium">
+                <div className="text-shimmer font-medium">
                   Complete transparency. Every time.
                 </div>
               </div>

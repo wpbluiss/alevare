@@ -1,4 +1,5 @@
 import Nav from "@/components/Nav";
+import SpotlightEffect from "@/components/SpotlightEffect";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Services from "@/components/Services";
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <>
       <Nav />
+      <SpotlightEffect />
       <main className="flex-1">
         <Hero />
         <Stats />

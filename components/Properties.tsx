@@ -22,7 +22,7 @@ export default function Properties() {
           {properties.map((p, idx) => (
             <Reveal key={p.name} delay={idx * 60}>
               <div
-                className="h-full border border-[color:var(--border-hairline)] bg-[color:var(--surface-elevated)] p-5 md:p-6 transition-colors hover:border-[color:var(--accent-primary)]/60"
+                className="spotlight-card h-full border border-[color:var(--border-hairline)] bg-[color:var(--surface-elevated)] p-5 md:p-6 transition-colors hover:border-[color:var(--accent-primary)]/60"
                 style={{ borderRadius: "2px" }}
               >
                 <div

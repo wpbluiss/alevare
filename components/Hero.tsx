@@ -59,7 +59,7 @@ export default function Hero() {
           </h1>
 
           <div
-            className="mt-6 mb-6 text-[14px] font-medium text-[color:var(--accent-primary)]"
+            className="text-shimmer mt-6 mb-6 text-[14px] font-medium"
             style={{ letterSpacing: "0.15em", textTransform: "uppercase" }}
           >
             One Team. Every Trade. White-Glove Standard — Every Time.
@@ -85,11 +85,11 @@ export default function Hero() {
               "Spa & Wellness",
               "Ballrooms",
               "Luxury Residences",
-            ].map((space) => (
+            ].map((space, idx) => (
               <span
                 key={space}
-                className="border border-[color:var(--border-hairline)] px-3.5 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em] text-[color:var(--accent-primary)]"
-                style={{ borderRadius: "2px" }}
+                className="pill-in border border-[color:var(--border-hairline)] px-3.5 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em] text-[color:var(--accent-primary)]"
+                style={{ borderRadius: "2px", "--pill-delay": `${300 + idx * 70}ms` } as React.CSSProperties}
               >
                 {space}
               </span>

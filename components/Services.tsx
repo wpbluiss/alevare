@@ -91,7 +91,7 @@ export default function Services() {
             {services.map((s, idx) => (
               <Reveal as="article" delay={idx * 60 + 160} key={s.title}>
                 <div
-                  className="service-card h-full border border-[color:var(--border-hairline)] bg-[color:var(--surface-elevated)] p-5 md:p-6 transition-colors hover:border-[color:var(--accent-primary)]/60 flex flex-col"
+                  className="service-card spotlight-card h-full border border-[color:var(--border-hairline)] bg-[color:var(--surface-elevated)] p-5 md:p-6 transition-colors hover:border-[color:var(--accent-primary)]/60 flex flex-col"
                   style={{ borderRadius: "2px" }}
                 >
                   <div className="flex items-start gap-3">
