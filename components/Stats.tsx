@@ -10,42 +10,36 @@ type Stat = {
 const stats: Stat[] = [
   {
     counter: {
-      segments: [
-        { kind: "count", to: 24 },
-        { kind: "text", value: "–" },
-        { kind: "count", to: 48 },
-      ],
-      suffix: " HR",
+      segments: [{ kind: "count", to: 5 }],
+      suffix: "+",
     },
-    label: "Standard turnaround",
-  },
-  {
-    counter: null,
-    display: "Forbes & AAA",
-    label: "Inspection standards",
+    label: "Years working together",
   },
   {
     counter: {
-      segments: [{ kind: "count", to: 100 }],
-      suffix: "%",
+      segments: [{ kind: "count", to: 8 }],
     },
-    label: "Documented restoration cycles",
+    label: "Trades mastered in-house",
   },
   {
-    counter: null,
-    display: "Zero",
-    label: "Disruption to your guests",
+    counter: {
+      segments: [{ kind: "count", to: 4 }],
+    },
+    label: "Active industry certifications",
   },
 ];
 
 export default function Stats() {
   return (
     <section
-      aria-label="Alevare by the numbers"
+      aria-label="The team behind the work"
       className="border-y border-[color:var(--border-hairline)] py-16 md:py-20"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-6 md:gap-x-10">
+        <Reveal className="text-center">
+          <div className="eyebrow mb-12">The team behind the work</div>
+        </Reveal>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-12 gap-x-6 md:gap-x-10">
           {stats.map((s, idx) => (
             <Reveal key={s.label} delay={idx * 80} className="flex flex-col items-center text-center">
               {s.counter ? (
@@ -64,6 +58,22 @@ export default function Stats() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={240}>
+          <p className="mx-auto mt-14 max-w-3xl text-center text-[15px] md:text-[16px] leading-relaxed text-[color:var(--text-muted)]">
+            What makes Alevare different isn&rsquo;t just where we&rsquo;ve
+            worked — it&rsquo;s{" "}
+            <span className="text-[color:var(--text-primary)] font-medium">
+              how we work together
+            </span>
+            . Our founders and core team have operated as a unit across South
+            Florida&rsquo;s most prestigious properties, building a shared
+            standard of execution that no assembled crew can replicate.{" "}
+            <span className="text-[color:var(--text-primary)] font-medium">
+              One team owns the outcome, start to finish.
+            </span>
+          </p>
+        </Reveal>
       </div>
     </section>
   );
