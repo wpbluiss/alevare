@@ -156,6 +156,27 @@ export function BookingFlow() {
       return;
     }
 
+    // Best-effort email notification to the Alevare inbox.
+    try {
+      await fetch("https://formsubmit.co/ajax/info@alevaregroup.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `New consultation booked — ${name}`,
+          _template: "table",
+          _captcha: "false",
+          Name: name,
+          Email: email,
+          Phone: phone === "" ? "—" : phone,
+          Company: company === "" ? "—" : company,
+          "Scheduled for": `${formatEtDateTime(new Date(selectedSlot.startsAtIso))} ET`,
+          Notes: notes === "" ? "—" : notes,
+        }),
+      });
+    } catch {
+      // The booking itself succeeded and is in the CRM calendar.
+    }
+
     setConfirmation({ startsAtIso: selectedSlot.startsAtIso });
     setStep("success");
   }

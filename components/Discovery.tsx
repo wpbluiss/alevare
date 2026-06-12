@@ -1,6 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+
+const NOTIFY_ENDPOINT = "https://formsubmit.co/ajax/info@alevaregroup.com";
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
 
 const inputBase =
   "w-full bg-[color:var(--surface-base)] border border-[color:var(--border-hairline)] text-[color:var(--text-primary)] placeholder-[color:var(--text-muted)] px-4 py-3 text-[14px] outline-none transition-colors focus:border-[color:var(--accent-primary)]";
@@ -28,10 +36,67 @@ const Check = () => (
 
 export default function Discovery() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: wire up to Formspree/Resend endpoint
+    if (sending) return;
+    setSending(true);
+    setError(null);
+
+    const data = new FormData(e.currentTarget);
+    const field = (k: string) => (data.get(k) as string | null)?.trim() || null;
+    const fullName = field("fullName") ?? "";
+    const email = field("email") ?? "";
+    const phone = field("phone");
+    const propertyName = field("propertyName");
+    const location = field("location");
+    const consultDate = field("consultDate");
+    const message = field("message");
+
+    // Record the inquiry in the CRM (durable even if the email hiccups)
+    const { error: rpcError } = await supabase.rpc("submit_inquiry", {
+      p_name: fullName,
+      p_email: email,
+      p_phone: phone,
+      p_property: propertyName,
+      p_location: location,
+      p_consult_date: consultDate,
+      p_message: message,
+    });
+
+    // Email notification to the Alevare inbox (best-effort)
+    let emailOk = false;
+    try {
+      const res = await fetch(NOTIFY_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `New website inquiry — ${fullName}${propertyName ? ` (${propertyName})` : ""}`,
+          _template: "table",
+          _captcha: "false",
+          Name: fullName,
+          Email: email,
+          Phone: phone ?? "—",
+          Property: propertyName ?? "—",
+          Location: location ?? "—",
+          "Preferred date": consultDate ?? "—",
+          Message: message ?? "—",
+        }),
+      });
+      emailOk = res.ok;
+    } catch {
+      emailOk = false;
+    }
+
+    setSending(false);
+    if (rpcError && !emailOk) {
+      setError(
+        "Something went wrong sending your request. Please email info@alevaregroup.com directly."
+      );
+      return;
+    }
     setSubmitted(true);
   };
 
@@ -162,11 +227,21 @@ export default function Discovery() {
 
                   <button
                     type="submit"
-                    className="btn-gold inline-flex items-center justify-center px-8 py-4 text-[14px] font-semibold tracking-wide mt-2 self-start"
+                    disabled={sending}
+                    className="btn-gold inline-flex items-center justify-center px-8 py-4 text-[14px] font-semibold tracking-wide mt-2 self-start disabled:opacity-60 disabled:cursor-wait"
                     style={{ borderRadius: "2px" }}
                   >
-                    Schedule Consultation <span className="ml-2">→</span>
+                    {sending ? "Sending…" : (
+                      <>
+                        Schedule Consultation <span className="ml-2">→</span>
+                      </>
+                    )}
                   </button>
+                  {error && (
+                    <p className="text-[13px] leading-relaxed text-[#D98E8E]" role="alert">
+                      {error}
+                    </p>
+                  )}
                 </form>
               )}
             </div>
