@@ -53,10 +53,21 @@ export async function GET(req: NextRequest) {
 
   const res = await fetch(NOTIFY_ENDPOINT, {
     method: "POST",
-    headers: { "Content-Type": "application/json", Accept: "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      Origin: "https://www.alevaregroup.com",
+      Referer: "https://www.alevaregroup.com/",
+      "User-Agent":
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0 Safari/537.36",
+    },
     body: JSON.stringify(payload),
   });
-  const emailResult = await res.json().catch(() => ({}));
+  const rawBody = await res.text().catch(() => "");
+  let emailResult: unknown = rawBody;
+  try {
+    emailResult = JSON.parse(rawBody);
+  } catch {}
 
   let crm: string = "skipped";
   if (type === "inquiry") {
