@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+import { siteUrl, siteName, siteDescription } from "@/lib/site";
+
+const pageTitle =
+  "Alevare Group — Luxury Restoration & Preventive Maintenance, Full-Property Scope";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -16,18 +20,28 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alevare.vercel.app"),
-  title:
-    "Alevare Group — Luxury Restoration & Preventive Maintenance, Full-Property Scope",
-  description:
-    "One team, every trade — HVAC, refrigeration, MEP, pools & water features, FF&E, finishes, and electrical — calibrated to Forbes 5-Star and AAA Five Diamond standards. Full-property restoration and preventive maintenance with real-time client visibility.",
+  metadataBase: new URL(siteUrl),
+  title: pageTitle,
+  description: siteDescription,
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title:
-      "Alevare Group — Luxury Restoration & Preventive Maintenance, Full-Property Scope",
-    description:
-      "One team, every trade — HVAC, refrigeration, MEP, pools & water features, FF&E, finishes, and electrical — calibrated to Forbes 5-Star and AAA Five Diamond standards. Full-property restoration and preventive maintenance with real-time client visibility.",
+    title: pageTitle,
+    description: siteDescription,
     type: "website",
-    siteName: "Alevare Group",
+    url: siteUrl,
+    siteName,
     images: [
       {
         url: "/og-image.jpg",
@@ -39,8 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Alevare Group — Luxury Restoration & Preventive Maintenance, Full-Property Scope",
+    title: pageTitle,
     description:
       "One team, every trade — full-property luxury restoration and preventive maintenance calibrated to Forbes 5-Star and AAA Five Diamond standards.",
     images: ["/og-image.jpg"],
